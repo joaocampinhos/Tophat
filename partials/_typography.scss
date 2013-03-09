@@ -1,0 +1,87 @@
+/*---------------------------------
+  ~TYPOGRAPHY
+---------------------------------*/
+
+// ^Body //
+body {
+  font: 100%/#{$lineHeight} $bodyFont;
+}
+
+div,dl,dt,dd,ul,ol,li,form,p,blockquote,th,td,pre,code,samp,kbd {
+  font-size: $fontSize/16 + em;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-weight: italic;
+}
+
+
+// ^Headings //
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headerFont;
+  font-weight: $headerFontWeight;
+}
+
+h1, .alpha {
+  @include header($h1Size);
+}
+
+h2, .beta {
+  @include header($h2Size);
+}
+
+h3, .gamma {
+  @include header($h3Size);
+}
+
+h4, .delta {
+  @include header($h4Size);
+}
+
+h5, .epsilon {
+  @include header($h5Size);
+}
+
+h6, .zeta {
+  @include header($h6Size);
+}
+
+//Extra big!
+.kilo {
+  @include header(getRatio(6));
+}
+
+.mega {
+  @include header(getRatio(7));
+}
+
+.mega {
+  @include header(getRatio(8));
+}
+
+
+
+// ^Quote //
+q {
+  &:before{
+    content:open-quote;
+  }
+  &:after{
+    content:close-quote;
+  }
+}
+
+
+// ^Code //
+pre, code, samp, kbd {
+  font-family: $monospaceFont;
+}
+

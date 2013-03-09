@@ -1,0 +1,42 @@
+/*---------------------------------
+  ~GRID-FLUID
+---------------------------------*/
+
+// The grid //
+@for $i from 1 through $fColumns {
+  .row .col#{$i} { 
+    width: 100% / $columns * $i;
+    position: relative;
+    min-height: 1px;
+    padding: 0 $fGutter / 2 + px;
+    float: left;
+  }
+}
+
+// Push classes //
+@for $i from 1 through $fColumns - 1 {
+  .row .push#{$i}{
+    left: 100% / $fColumns * $i;
+  }
+}
+
+// Padding fix //
+.row [class*="col"]:last-of-type {
+  padding-right: 0;
+}
+
+.row [class*="col"]:first-of-type {
+  padding-left: 0;
+}
+
+.row{
+  width: auto;
+  @if $maxWidth != 0 {
+    margin: 0 auto;
+    max-width: $maxWidth + px;
+  }
+  @include clearfix();
+}
+
+// Dont mind this, its there to help writing a properly responsive style
+$fGrid: true;

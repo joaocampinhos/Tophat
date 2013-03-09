@@ -1,0 +1,68 @@
+/*---------------------------------
+  ~RESPONSIVE
+---------------------------------*/
+
+// ^DesktopXL //
+@media (min-width: $screenDesktop) {
+  @if $fGridResponsive and $fGrid {
+    .row [class*="col"] {
+      padding: 0 $fGutterBigDesktop/2+px;
+    }
+  }
+}
+
+// ^Tablet //
+@media (min-width: $screenPhone) and (max-width: $screenTablet) {
+  @if $fGridResponsive and $fGrid {
+    .row [class*="col"] {
+      padding: 0 $fGutterTablet/2+px;
+    }
+  }
+}
+ 
+// ^Phone //
+@media (max-width: $screenPhone) { 
+  @if $gridResponsive and $grid {
+    .row { width: auto !important; min-width: 0; margin: 0; margin-right: 0; }
+    .row [class*="col"] {
+      float: none;
+      left: 0;
+      margin: 0;
+    }
+  }
+  @if $fGridResponsive and $fGrid {
+    .row [class*="col"] {
+      float: none;
+      left: 0;
+      padding: 0;
+      width: 100%;      
+    }    
+  }
+}
+
+// those six responsive utility classes were stolen from Bootstrap (http://twitter.github.com/bootstrap/scaffolding.html#responsive)
+.visible-phone     { display: none !important; }
+.visible-tablet    { display: none !important; }
+.visible-desktop   { display: inherit !important; }
+.hidden-phone      { }
+.hidden-tablet     { }
+.hidden-desktop    { display: none !important; }
+
+@media (min-width: $screenPhone) and (max-width: $screenTablet) {
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important ; }
+  .visible-tablet    { display: inherit !important; }
+  .hidden-tablet     { display: none !important; }
+}
+
+@media (max-width: $screenPhone) {
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+  .visible-phone     { display: inherit !important; }
+  .hidden-phone      { display: none !important; }
+}
+
+// Not really responsive but usefull
+.hide {
+  display: none;
+}

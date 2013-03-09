@@ -1,0 +1,48 @@
+//---------------------------------
+// ~MIXINS
+//---------------------------------
+
+// Mixin for calculate font-size and line-height of the headings (to keep things DRY)
+@mixin header($px){
+  font-size: getHeight($px);
+  line-height:ceil($px / ($lineHeight*16)) * (($lineHeight*16) / $px);
+}
+
+// Cleafix - courtesy of http://nicolasgallagher.com/micro-clearfix-hack/ //
+@mixin clearfix(){
+  overflow:hidden;
+  zoom: 1;
+  &:before, &:after {
+    content: " "; display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// for font-size
+@function getHeight($px) {
+  @return #{$px/16}em;
+}
+
+// If you want to modify headings using a ratio. I love HUGE font-sizes so this is why I created this function
+@function getRatio($n) {
+  $res : $fontSize !default;
+  @for $i from 1 through $n {
+    $res : $res * $ratio;
+  }
+  @return ceil($res);
+}
+
+@if $useRatio {
+  $h1Size : getRatio(5);
+  $h2Size : getRatio(4);
+  $h3Size : getRatio(3);
+  $h4Size : getRatio(2);
+  $h5Size : getRatio(1);
+  $h6Size : getRatio(0);
+}
+
+
+
+

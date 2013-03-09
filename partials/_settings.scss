@@ -1,0 +1,47 @@
+//---------------------------------
+// ~VARIABLES
+//---------------------------------
+
+// ^Fonts //
+$serifFont: Georgia, "Times New Roman", Times, serif !default;
+$sansFont: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$monospaceFont: Monaco, Consolas, "Courier New", monospace !default;
+$fontSize: 16 !default;                         // Set this size in px. will later convert to em
+$lineHeight: 1.5 !default;                             
+
+// ^Headers //
+$headerFont: $sansFont !default;                // Set the font for the headings (h1, h2, ...)
+$headerFontWeight: bold !default;               // Set the font weight of the headings (bold, italic, normal)
+$useRatio: false;                               // Calculate the headers font-size based on a ratio ($ratio)
+$ratio: 1.24 !default;                          // If $useRatio is true, will use this ratio, else will use the values provided bellow
+$h1Size: 42 !default; 
+$h2Size: 36 !default; 
+$h3Size: 30 !default; 
+$h4Size: 24 !default; 
+$h5Size: 20 !default; 
+$h6Size: 16 !default; 
+
+// ^Body //
+$bodyFont: $sansFont !default;                  // Se the font for the body text
+$bodyFontWeight: normal !default;               // Set the font weight of the body text
+
+// ^Grid //
+$columns: 12 !default;                          // Set number of columns for the grid   
+$gutter: 20 !default;                           // Set the gutter width (in px) 
+$width: 960 !default;                           // Set the width of the grid (will calculate the column width based on that)  (in px)
+$gridResponsive: true !default;                 // Enable one collumn on each row for small devices. will work on max-width: $screenPhone
+$grid: false !default;                          // Dont change this. I'm using this to know which grid you choose so I don't have to import useless styles
+
+// ^Fluid Grid //
+$fColumns: 12 !default;                         // Number of columns for the fluid grid
+$fGutter: 20 !default;                          // Set the gutter width (in px)
+$maxWidth: 0 !default;                          // Max width for the row leave 0 to disable (in px)
+$fGridResponsive: true !default;                // Enable one collumn on each row for small devices. will work on max-width: $screenPhone
+$fGutterTablet: 10 !default;                    // if responsive is set to true, Change gutter width on min-width: $screenPhone and max-width: $screenTablet
+$fGutterBigDesktop: 30 !default;                // if responsive is set to true, Change gutter width on min-width: $screenDesktop
+$fGrid: false !default;                         // Dont change this. I'm using this to know which grid you choose so I don't have to import useless styles
+
+// ^Responsive //
+$screenPhone: 767px;                            // max-width: 767px 
+$screenTablet: 979px;                           // min-width: 767px and max-width: 979px
+$screenDesktop: 1200px;                         // min-width: 979px and max-width: 1200px || min-width: 1200px

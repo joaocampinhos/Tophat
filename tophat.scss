@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------------
+   _______                 _               _                            
+  |__   __|               | |             | |                           
+     | |    ___    _ __   | |__     __ _  | |_        ___   ___   ___   
+     | |   / _ \  | '_ \  | '_ \   / _` | | __|      / __| / __| / __|  
+     | |  | (_) | | |_) | | | | | | (_| | | |_   _  | (__  \__ \ \__ \  
+     |_|   \___/  | .__/  |_| |_|  \__,_|  \__| (_)  \___| |___/ |___/  
+                  | |                                                   
+                  |_|                                                   
+
+  + URL:        http://campinhos.pt/tophat/        
+  + Version:    0.1 (March 2013)
+  + Author:     João Campinhos (joao@campinhos.pt)
+  + Source:     https://github.com/joaocampinhos/Tophat
+
+------------------------------------------------------------------------*/
+  
+
+@import "partials/_settings";                   // Settings and variables
+@import "partials/_mixins";                     // Useful mixins and functions
+
+@import "partials/_reset";                      // Reset with normalize.css
+@import "partials/_typography";                 // Main typography of the framework
+
+@import "partials/_fluid-grid";                 // Fluid grid
+//@import "partials/_grid";                     // Non-fluid grid. disabled by default
+
+@import "partials/_responsive";                 // The responsive bits and bytes
+         
+
+/*---------------------------------
+  ~USER-STYLES
+---------------------------------*/
+
+// Insert your custom css here

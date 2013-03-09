@@ -1,0 +1,29 @@
+/*---------------------------------
+  ~NON-FLUID-GRID
+---------------------------------*/
+
+// The grid //
+@for $i from 1 through $columns {
+  .row .col#{$i} {
+    width: ($width - $gutter*($columns/$i))/ 12*$i+px;
+    position: relative;
+    float: left;
+    display: inline;
+    margin: 0 $gutter/2+px;
+  }
+}
+
+// Push classes //
+@for $i from 1 through $columns - 1 {
+  .row .push#{$i}{
+    left: $width/$columns*$i+px;
+  }
+}
+
+.row{
+  width: $width*1px;
+  @include clearfix();
+}
+
+// Dont mind this, its there to help writing a properly responsive style
+$grid: true;
