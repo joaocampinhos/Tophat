@@ -1,4 +1,5 @@
 Thumbs.db
 .DS_Store
 .sass-cache/
-test/
+*.swp
+node_modules/
